@@ -1,8 +1,8 @@
 const readlineSync = require("readline-sync")
 const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
-const { courses } = require('./storage');
-const {a1} = require('./storage');
+// const { courses } = require('./storage');
+
 
 
 // erstelle eine array für g 

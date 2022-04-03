@@ -1,22 +1,13 @@
 const readlineSync = require('readline-sync');
-//const { learn } = require("./sections/learn");
-const { learn } = require("../Sections/learn");
-const { index } = require("../index");
+const pc = require('picocolors');
 
 
-
-  function matheAufgaben() {
-     console.log('Menu>Lernen>Mathematik \n\n')
-    console.log(
-      
-      '\n\n' + 'Es gibt 27 Fragen zum Fach Mathematik. Die Fragen werden zufällig ausgewählt'+
-      '\n\n'
-                );
+function matheAufgaben() {
+  console.log(`${pc.blue('Menu>Lernen>Mathematik \n\n')}`);
+  console.log('\n\n' + 'Es gibt 27 Fragen zum Fach Mathematik. Die Fragen werden zufällig ausgewählt.'+'\n\n');
     RangeSlider();
     //finish();
-  
-  
-    }
+  }
     //const number1 = prompt('Wie viele Fragen möchtest du beantworten? Gib eine Zahl zwischen 1 und 27 an');
   //}
   //Methode zum Aufrufen von Mathe aus DB
@@ -25,19 +16,9 @@ const { index } = require("../index");
     const getQuestion = localStorage.getItem("Mathe");
     const parseQuestion = JSON.parse(getQuestion);
     console.log(getQuestion)
-
-
 */
-
 //function finish() {
-
-  
-  
 //}
-
-
- 
-
 function RangeSlider(){
   var readlineSync = require('readline-sync'),
   MAX = 30, MIN = 0, value = 0, key;

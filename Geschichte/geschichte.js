@@ -1,41 +1,22 @@
 const readlineSync = require('readline-sync');
-const { learn } = require("../Sections/learn");
-const { index } = require("../index");
-//const { learn } = require("./sections/learn");
+const pc = require('picocolors');
 
 function geschichtsAufgaben() {
-   console.log('Menu>Lernen>Geschichte \n\n')
-   console.log( 'Es gibt 15 Fragen zum Fach Geschichte. Die Fragen werden zufällig ausgewählt \n\n');
-
-    RangeSlider();
-
-
-
-  
-  
-  
-    }
-    //const number1 = prompt('Wie viele Fragen möchtest du beantworten? Gib eine Zahl zwischen 1 und 27 an');
-  //}
-  //Methode zum Aufrufen von Mathe aus DB
-  /*static fragenAufruf() {
+console.log(`${pc.blue('Menu>Lernen>Geschichte \n\n')}`);
+console.log( 'Es gibt 15 Fragen zum Fach Geschichte. Die Fragen werden zufällig ausgewählt.'+'\n\n');
+RangeSlider();
+}
+    //const number1 = prompt('Wie viele Fragen möchtest du beantworten? Gib eine Zahl       zwischen 1 und 27 an');
+    //}
+    //Methode zum Aufrufen von Mathe aus DB
+    /*static fragenAufruf() {
     console.log('Es werden alle Fragen der Kategorie Mathe angezeigt')
     const getQuestion = localStorage.getItem("Mathe");
     const parseQuestion = JSON.parse(getQuestion);
     console.log(getQuestion)
-
-
-*/
-
-//function finish() {
-
-  
-  
-//}
-
-
- 
-
+    */
+    //function finish() {
+    //}
 function RangeSlider(){
   var readlineSync = require('readline-sync'),
   MAX = 30, MIN = 0, value = 0, key;
@@ -62,18 +43,9 @@ console.log(`\nA User möchte : ${value} Fragen beantworten. `);
     if (key==='f') {
    console.log( ' Du hast '+value+ 'Fragen ausgewählt' )
       break;
-      
    }
-  
   }
-
-
-
-
-
-  
   /*var readlineSync = require('readline-sync');
- 
   MAX = 30, MIN = 0, value = 15, key;
   console.log(
   '\n\n' + 'Wie viele Fragen möchten Sie beantworten?'+
@@ -88,12 +60,9 @@ while (true) {
   if (key === 'a') { if (value > MIN) { value--; } }
   else if (key === 'd') { if (value < MAX) { value++; } }
   else { break; }
- 
 }
   return value;
   }
-
-
 /*function SicherheitsAbfrage(){
     var readlineSync = require('readline-sync');
     let input1 = readlineSync.keyInYN(`Bist dur sicher, dass du ${value} Fragen beantworten möchtest?`); 
@@ -113,20 +82,7 @@ console.log(anzahl_von_fragen:antworten);
       }
 }
 */
-
-  
-
-  
-
-
-
-  
-
 //RangeSlider();
-
 //exports.SicherheitsAbfrage = SicherheitsAbfrage;
 exports.geschichtsAufgaben = geschichtsAufgaben;
 exports.RangeSlider = RangeSlider;
-  
-  
-

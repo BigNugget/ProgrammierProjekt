@@ -4,16 +4,30 @@ const localStorage = new localstorage('./database');
 const {questions,courses} = require('./questions.js')
 const { database1 } = require('../storage')
 const pc = require('picocolors');
+const { ut } = require('../utils');
 
 //const { learn } = require('./learn.js');
+
+function admin() {
+   console.log(pc.blue(`Menu>Verwaltung \n\n`));
+  console.log('--- Verwaltungsmodus---');
+  console.log('Was möchten sie tun?');
+  const options = [ 'Fragen erstellen', 'Neue Kategorie erstellen'];
+  const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
+  console.clear();
+  //console.log(choice);
+  start1(options[choice])
+}
+
 function start1(choice) {
-	console.log("STARTING")
+	console.log("Create")
   switch (choice) {
     case "Fragen erstellen":
      	questions();
       break;
     case "Neue Kategorie erstellen":
-     // admin();
+      //admin();
+      ut.createDB();
       break;
     case "Programm beenden":
       console.log('Auf Wiedersehen!');
@@ -26,16 +40,7 @@ function start1(choice) {
 
   console.clear();  
 }
-function admin() {
-   console.log(pc.blue(`Menu>Verwaltung \n\n`));
-  console.log('--- Verwaltungsmodus---');
-  console.log('Was möchten sie tun?');
-  const options = [ 'Fragen erstellen', 'Kategorien erstellen'];
-  const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
-  console.clear();
-  //console.log(choice);
-  start1(options[choice])
-}
+
 
 
 exports.admin= admin;

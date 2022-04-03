@@ -1,8 +1,8 @@
 const readlineSync = require('readline-sync');
-//const readlineSync = require('./Mathe');
+const { geographieAufgaben } = require('../Geographie/geographie');
 const { matheAufgaben } = require('../Mathe/mathematik');
+const { geschichtsAufgaben } = require('../Geschichte/geschichte');
 const { ut } = require('../utils');
-const {  geschichtsAufgaben   }= require ('../Geschichte/geschichte')
 const pc = require('picocolors');
 
 const LocalStorage = require('node-localstorage').LocalStorage;
@@ -19,9 +19,9 @@ function learn() {
 
 function courses(choice){
   switch (choice) {
-      // Wenn Geographie ausgewählt wird wird die Funktion database ausgeführt
+      // 
     case "Geographie":
-      database1();
+      geographieAufgaben();
       break;
     case "Mathematik":
       //matheaufgaben.matheaufgaben();
@@ -41,6 +41,7 @@ function courses(choice){
 }
 
 exports.learn = learn;  
+exports.courses=courses;
 
 
  /*const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');

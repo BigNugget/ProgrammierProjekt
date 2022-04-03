@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
 const { admin, start1} = require("./Sections/admin");
-const { learn, } = require("./Sections/learn");
+const { learn } = require("./Sections/learn");
 const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
 const { matheaufgaben,RangeSlider } = require("./Mathe/mathematik");
 //const { geschichtsaufgaben } = require("./Geschichte/geschichte");
@@ -106,30 +106,29 @@ function mainMenu() {
 }
  
 function start(){
+  
 console.log(`${pc.blue('Menu \n\n')}`);
 console.log(`${pc.green("Hallo")} und ${pc.red("Willkommen!")}`);
-  // console.log('Herzlich Willkommen  ')
 const choice = mainMenu();
   switch (choice) {
-      //Wenn Lernen ausgewählt wird wird die Funktion learn 
+    //Wenn Lernen ausgewählt wird, gelangt man zur nächsten Ansicht, in welcher die         verschiedenen Fächer ausgewählt werden können
     case "Lernen":
       learn();
       break;
+    //Wenn Verwaltung ausgewählt wird, gelangt man zur nächsten Ansicht, in welcher         neue Kategorien/Fragen/Antworten erstellt werden können  
     case "Verwaltung":
       admin();
       break;
+    //Beendet das Programm
     case "Programm beenden":
       console.log('Auf Wiedersehen!');
-      //process.exit(1);
+      process.exit(1);
       break;
     default:
       console.log('ungültige Eingabe!');
       break;
   }
-
   console.clear();  
-
-  
 }
   
   

@@ -43,5 +43,3 @@
 {"question":" Berechnen sie   (x^6)^2  ","answer":"x^12"},
 
 {"question":" Schreiben sie a ^-3 um ","answer":"1 / a ^3"}]
-
-exports.db3 = db3; 

@@ -1,5 +1,9 @@
 const readlineSync = require("readline-sync");
-const { database1 } = require('../storage');
+const { neueFrage } = require('../utils');
+const pc = require('picocolors');
+const { ut } = require('../utils');
+const { LocalStorage } = require('node-localstorage');
+const localStorage = new LocalStorage('./database');
 /*const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
 /*
 
@@ -12,7 +16,7 @@ localStorage.setItem(JSON.stringify(alteMatheDaten));
 */
 
 function questions() {
-   console.log('Menu>Lernen>Fragen erstellen \n\n')
+   console.log(`${pc.blue('Menu>Lernen>Fragen erstellen \n\n')}`);
   console.log(' Zu welchem Fach möchtest du deine Fragen hinzufügen?')
   const options  = ['Geographie', 'Mathematik', 'Geschichte'];
 	const choice = readlineSync.keyInSelect(options,'Wähle ein Fach aus ');
@@ -24,8 +28,7 @@ function questions() {
   switch (choice) {
     case "Geographie":
         console.log('\n');
-        let a1= prompt ("Tippe hier deine Frage zum Fach Geographie ein")
-        database1();
+        neueFrage();
 const readlineSync = require("readline-sync");
 const { database1 } = require('../storage');
 /*const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
