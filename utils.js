@@ -66,3 +66,4 @@ exports.ut = Utils;
 exports.setThema = setThema;
 exports.deleteThema = deleteThema;
 exports.editThema = editThema;
+exports.createDB = createDB;
