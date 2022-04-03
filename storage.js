@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync")
 
-
+// erstelle eine array für g 
 class geographie1 {
   constructor(question, answer) {
     this.question = question;
@@ -12,7 +12,7 @@ function database1() {
   let qg2= new geographie1(Griechenland,Athen)
   let qg3 = new geograhie1(Deutschland,Berlin)
   const geographieArray= [qg1, qg2, qg3, ];
-  return geographiearray;
+  return geographieArray;
 }
 
 
@@ -42,7 +42,7 @@ function database2() {
   let qm2 = new mathe1(Was ist die erste Ableitung von 5x^4+6x^2+1,20x^3+12x)
   let qm3 = new mathe1(Was ist die erste  Ableitung der Zahl 10*e^x^4,10*4x^3*e^x^4)
   const matheArray = [qm1, qm2, qm3, ];
-  return mathearray;
+  return matheArray;
 }
 // JSON ist in JavaScript enthalten 
 // --> kein import oder require für JSON nötig
