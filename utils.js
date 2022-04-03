@@ -2,6 +2,7 @@ const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
 const pc = require('picocolors');
 const readlineSync = require('readline-sync');
+const fs = require('fs');
 
 //Klasse Utils wird verwendet, um eine Zufallszahl zu erzeugen
 class Utils {
@@ -84,13 +85,20 @@ class Utils {
   static neueFrage() {
       let question = readlineSync.question("Frage: ");
       let answer = readlineSync.question("Antwort: ");
+      let category = readlineSync.question("Kategorie: ")
       let obj = {
         question: `${question}`,
-        answer: `${answer}`
+        answer: `${answer}`,
+        category: `${category}`
       }
       return obj;
       console.log(obj)
     }
+
+  static getCategories(){
+    console.log(fs.readdirSync("./database"));
+    
+  }
 //Ende von Funktion
     
   }

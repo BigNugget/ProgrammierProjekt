@@ -28,7 +28,7 @@ function questions() {
   switch (choice) {
     case "Geographie":
         console.log('\n');
-        neueFrage();
+        ut.neueFrage();
 const readlineSync = require("readline-sync");
 const { database1 } = require('../storage');
 /*const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");

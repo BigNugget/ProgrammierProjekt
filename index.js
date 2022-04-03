@@ -8,7 +8,7 @@ const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
 const {questions,courses} = require('./Sections/questions');
 const pc = require('picocolors');
-
+const { ut } = require('./utils');
 /*
 // Hier kriegt ihr die Daten aus Mathe Datenbank
 let matheDaten = JSON.parse(localStorage.getItem('Mathe'));
@@ -109,6 +109,8 @@ function start(){
   
 console.log(`${pc.blue('Menu \n\n')}`);
 console.log(`${pc.green("Hallo")} und ${pc.red("Willkommen!")}`);
+ut.getCategories();
+  
 const choice = mainMenu();
   switch (choice) {
     //Wenn Lernen ausgewählt wird, gelangt man zur nächsten Ansicht, in welcher die         verschiedenen Fächer ausgewählt werden können
