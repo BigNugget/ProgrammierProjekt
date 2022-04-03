@@ -6,8 +6,8 @@ const { matheaufgaben,RangeSlider } = require("./Mathe/mathematik");
 //const { geschichtsaufgaben } = require("./Geschichte/geschichte");
 const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
-const {questions} = require('./Sections/questions');
-
+const {questions,courses} = require('./Sections/questions');
+const pc = require('picocolors');
 
 /*
 // Hier kriegt ihr die Daten aus Mathe Datenbank
@@ -81,21 +81,37 @@ let randomArray = mathezufall.sampleSize(mathearray, array.length)
 console.log(randomArray)
 */
 
+/*class geographie1 {
+  constructor(question, answer) {
+    this.question = question;
+    this.answer = answer;
+  }
+};
+
+let hallo=[{"question":"Niederlande","answer":"Amsterdam"}]
+
+//const fruits = ["Banana", "Orange", "Apple", "Mango"];
+hallo.push("Kiwi", "Lemon");
+console.log(hallo)
+*/
 start();
 
 function mainMenu() {
    
   console.log('--- HAUPTMENÜ ---');
-  const options = ['Lernen', 'Verwaltung', 'Programm beenden'];
+  const options = ['Lernen', 'Verwaltung'];
   const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
   console.clear();
   return options[choice];
 }
  
 function start(){
-console.log('Herzlich Willkommen  ')
+console.log(`${pc.blue('Menu \n\n')}`);
+console.log(`${pc.green("Hallo")} und ${pc.red("Willkommen!")}`);
+  // console.log('Herzlich Willkommen  ')
 const choice = mainMenu();
   switch (choice) {
+      //Wenn Lernen ausgewählt wird wird die Funktion learn 
     case "Lernen":
       learn();
       break;

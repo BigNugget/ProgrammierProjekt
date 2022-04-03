@@ -13,6 +13,7 @@
     "index": "^0.4.0",
     "lodash": "^4.17.21",
     "node-localstorage": "^2.2.1",
+    "picocolors": "^1.0.0",
     "readline-sync": "^1.4.10",
     "storage": "^0.2.0"
   }

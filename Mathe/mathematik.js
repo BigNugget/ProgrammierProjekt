@@ -5,7 +5,8 @@ const { index } = require("../index");
 
 
 
-  function matheaufgaben() {
+  function matheAufgaben() {
+     console.log('Menu>Lernen>Mathematik \n\n')
     console.log(
       
       '\n\n' + 'Es gibt 27 Fragen zum Fach Mathematik. Die Fragen werden zufällig ausgewählt'+
@@ -40,8 +41,10 @@ const { index } = require("../index");
 function RangeSlider(){
   var readlineSync = require('readline-sync'),
   MAX = 30, MIN = 0, value = 0, key;
-console.log('\n\n' + (new Array(20)).join(' ') +
-  '[A] <- -> [D]  FIX: [SPACE]\n');
+console.log(
+  '\n\n' + 'Wie viele Fragen möchten Sie beantworten?'+
+  '\n\n' + (new Array(20)).join(' ') +
+  '[A] <- -> [D]  Bestätige: [SPACE]\n');
 while (true) {
   console.log('\x1B[1A\x1B[K|' +
     (new Array(value + 1)).join('-') + 'O' +
@@ -52,7 +55,7 @@ while (true) {
   else if (key === 'd') { if (value < MAX) { value++; } }
   else { break; }
 }
-console.log('\nA value the user requested: ' + value);
+console.log(`\nA User möchte : ${value} Fragen beantworten. `);
   return value
 }
 // Nutzer hat seine Anzahl an Fragen ausgewählt
@@ -124,7 +127,7 @@ console.log(anzahl_von_fragen:antworten);
 //RangeSlider();
 
 //exports.SicherheitsAbfrage = SicherheitsAbfrage;
-exports.matheaufgaben = matheaufgaben;
+exports.matheAufgaben = matheAufgaben;
 exports.RangeSlider = RangeSlider;
 //exports.finish=finish;
 

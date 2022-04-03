@@ -2,6 +2,8 @@ const readlineSync = require('readline-sync');
 const localstorage = require('node-localstorage').LocalStorage;
 const localStorage = new localstorage('./database');
 const {questions,courses} = require('./questions.js')
+const { database1 } = require('../storage')
+const pc = require('picocolors');
 
 //const { learn } = require('./learn.js');
 function start1(choice) {
@@ -25,6 +27,7 @@ function start1(choice) {
   console.clear();  
 }
 function admin() {
+   console.log(pc.blue(`Menu>Verwaltung \n\n`));
   console.log('--- Verwaltungsmodus---');
   console.log('Was möchten sie tun?');
   const options = [ 'Fragen erstellen', 'Kategorien erstellen'];

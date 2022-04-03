@@ -1,0 +1,4 @@
+[{"question":"Niederlande","answer":"Amsterdam"}]
+
+//const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.push("Kiwi", "Lemon");

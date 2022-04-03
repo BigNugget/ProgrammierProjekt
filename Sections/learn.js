@@ -1,14 +1,17 @@
 const readlineSync = require('readline-sync');
 //const readlineSync = require('./Mathe');
-const { matheaufgaben } = require('../Mathe/mathematik');
+const { matheAufgaben } = require('../Mathe/mathematik');
 const { ut } = require('../utils');
+const {  geschichtsAufgaben   }= require ('../Geschichte/geschichte')
+const pc = require('picocolors');
 
 const LocalStorage = require('node-localstorage').LocalStorage;
 const localStorage = new LocalStorage('./database');
 
 function learn() {
+  console.log(`${pc.blue('Menu>Lernen \n\n')}`);
   console.log('--- ToDo: Fach auswählen ---');
-  const options  = ['Geographie', 'Mathematik', 'Geschichte', ' Programm beenden'];
+  const options  = ['Geographie', 'Mathematik', 'Geschichte'];
   const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
   console.clear();
   courses(options[choice]);
@@ -16,17 +19,18 @@ function learn() {
 
 function courses(choice){
   switch (choice) {
+      // Wenn Geographie ausgewählt wird wird die Funktion database ausgeführt
     case "Geographie":
-      
+      database1();
       break;
     case "Mathematik":
       //matheaufgaben.matheaufgaben();
-      matheaufgaben();
+      matheAufgaben();
       
        //localStorage.setItem('mathe', JSON.stringify(dateaes));
       break;
     case "Geschichte":
-      let Geschichte = localStorage.getItem("Geschichte");
+      geschichtsAufgaben();
       break;
 
       

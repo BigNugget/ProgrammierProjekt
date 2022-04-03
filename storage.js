@@ -1,4 +1,9 @@
 const readlineSync = require("readline-sync")
+const { LocalStorage } = require('node-localstorage');
+const localStorage = new LocalStorage('./database');
+const { courses } = require('./storage');
+const {a1} = require('./storage');
+
 
 // erstelle eine array für g 
 class geographie1 {
@@ -7,26 +12,30 @@ class geographie1 {
     this.answer = answer;
   }
 };
+
+
+
 function database1() {
-  let qg1 = new geographie1(Niederlande,Amsterdam)
-  let qg2= new geographie1(Griechenland,Athen)
-  let qg3 = new geograhie1(Deutschland,Berlin)
-  const geographieArray= [qg1, qg2, qg3, ];
-  return geographieArray;
+  let qg1 = new geographie1("Niederlande","Amsterdam")
+  let qg2 = new geographie1("Kiwi, Lemon")
+  const geographieArray  = [qg1]
+  const testdb = JSON.stringify(geographieArray);
+  localStorage.setItem("Test-DB", testdb)  
+  const newStr = JSON.stringify(a1);
+  localStorage.setItem("Test-DB", newStr);
+  
 }
 
-
-
-
+/*
 
 
 // JSON ist in JavaScript enthalten 
 // --> kein import oder require für JSON nötig
-const jsonString1 = JSON.stringify(geographieArray);
-JSON.parse(JSON.stringify(geographieArray))
+//const jsonString1 = JSON.stringify(geographieArray);
+//JSON.parse(JSON.stringify(geographieArray))
 
 
-console.log(jsonstring1);
+//console.log(jsonstring1);
 
 // Erstellen des Arrays Matheaufgaben
 
@@ -91,7 +100,7 @@ console.log(jsonstring3);
 
 
 
-/*// Erstellen des Arrays Matheaufgaben
+/* Erstellen des Arrays Matheaufgaben
 
 // Konstruktur 
 class geographie1 {
@@ -159,9 +168,9 @@ matheArray1.push(card4)
 
 console.log ( mathearray)
 */
-exports.mathe1 = mathe1;
+//exports.mathe1 = mathe1;
 exports.database1 = database1;
-exports.geograhie1 = geographie1;
-exports.database2 = database2;
-exports.geschichte1 = gesschichte1;
-exports.database3 = database3;
+exports.geographie1 = geographie1;
+//exports.database2 = database2;
+//exports.geschichte1 = geschichte1;
+//exports.database3 = database3;
