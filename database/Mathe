@@ -1,6 +1,4 @@
-
-
-{[{"question":"Was  ist die erste  Ableitung der Zahl 7?","answer":0},
+{"questions":[{"question":"Was  ist die erste  Ableitung der Zahl 7?","answer":0},
 
 {"question":"Was ist die erste Ableitung von 5x^4+6x^2+1","answer":"20x^3+12x"},
 
@@ -16,13 +14,13 @@
 
 {"question":"Berechen die Extrempunkte der Funktion f(x)= -x^2+6x-6","answer":"Es gibt einen Hochpunkt mit Koordinaten  (3/3)"},
 
-{"question":" Berechen die Extrempunkte der Funktion f(x)= x^2+2x-1","answer":"T( -1/-2)"},
+{"question":" Berechen die Extrempunkte der Funktion f(x)= x^2+2x-1","answer":"die Funktion hat den Tiefpunkt( -1/-2)"},
 
-{"question":"  Berechen die Extrempunkte der Funktion  f(x)= 1/3x^3-9x","answer":"t(3/-18)  H(-3/18)"},
+{"question":"  Berechen die Extrempunkte der Funktion  f(x)= 1/3x^3-9x","answer":"Die Funktion hat den Tiefpunkt(3/-18) und den  Hochpunkt(-3/18)"},
 
-{"question":"   Was ist die erste Ableitung der Funktion   f(x) = (x^2-3x)^2 ","answer":"null"},
+{"question":"   Was ist die erste Ableitung der Funktion   f(x) = 5x^3 ","answer":"Die Ableitung ist 15x^2"},
 
-{"question":"  Was ist die erste Ableitung der Funktion     f(x) = e^x^3    ","answer":"f´(x) = ex^3*3x^2"},
+{"question":"  Was ist die erste Ableitung der Funktion     f(x) = e^x^3    ","answer":"f´(x) = 3*ex^3"},
 
 {"question":" leiten sie 8+4*e^x^3  ab","answer":" 12x^2*e^x^3"},
 
@@ -42,5 +40,5 @@
 
 {"question":" Berechnen sie   (x^6)^2  ","answer":"x^12"},
 
-{"question":" Schreiben sie a ^-3 um ","answer":"1 / a ^3"}]
+{"question":" Schreiben sie a ^-3 um ","answer":"1 / a ^3"}],"name":"Mathe"
 }

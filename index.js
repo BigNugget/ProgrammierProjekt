@@ -1,99 +1,13 @@
 const readlineSync = require("readline-sync");
 const { admin, start1} = require("./Sections/admin");
 const { learn } = require("./Sections/learn");
-const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
-const { matheaufgaben,RangeSlider } = require("./Mathe/mathematik");
-//const { geschichtsaufgaben } = require("./Geschichte/geschichte");
 const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
 const {questions,courses} = require('./Sections/questions');
 const pc = require('picocolors');
 const { ut } = require('./utils');
-/*
-// Hier kriegt ihr die Daten aus Mathe Datenbank
-let matheDaten = JSON.parse(localStorage.getItem('Mathe'));
+var inquirer = require('inquirer');
 
-//Hier kriegt ihr die Daten aus Geographie
-let geographieDaten = JSON.parse(localStorage.getItem('Geographie'));
-
-//Hier kriegt ihr die Daten aus Geschichte
-let geschichteDaten = JSON.parse(localStorage.getItem('Geschichte'));
-
-//Falls ihr ne Frage hinzufügen wollt:
-BsP: Mathe
-let alteMatheDaten = JSON.parse(localStorage.getItem('Mathe'));
-let neueFrage = {question: "Kam zuerst das Ei oder das Huhn", answer: "Atome"};
-alteMatheDaten.push(neueFrage);
-localStorage.setItem(JSON.stringify(alteMatheDaten));
-
-
-//Falls ihr ne Frage löschen wollt:
-BsP: Mathe
-let alteMatheDaten = JSON.parse(localStorage.getItem('Mathe'));
-let frageZuLöschen = {question: ..., answer: ...}
-let neueMatheDaten = []
-for(let i =0; i < alteMatheDaten.length; i++){
-	if(alteMatheDaten[i].question !== frageZuLöschen.question && alteMatheDaten[i].answer !== frageZuLöschen.answer ){
-	neueMatheDaten.push(alteMatheDaten[i]);
-	}
-}
-localStorage.setItem(JSON.stringify(neueMatheDaten));
-*/
-
-//Hier kriegt ihr die Daten aus Geographie
-//let geographieDaten = JSON.parse(localStorage.getItem('Geographie'));
-
-//Hier kriegt ihr die Daten aus Geschichte
-//let geschichteDaten = JSON.parse(localStorage.getItem('Geschichte'));
-
-//Falls ihr ne Frage hinzufügen wollt:
-/*BsP: Mathe
-let alteMatheDaten = JSON.parse(localStorage.getItem('Mathe'));
-let neueFrage = {question: "Kam zuerst das Ei oder das Huhn", answer: "Atome"};
-alteMatheDaten.push(neueFrage);
-localStorage.setItem(JSON.stringify(alteMatheDaten));
-*/
-
-//Falls ihr ne Frage löschen wollt:
-/*BsP: Mathe
-let alteMatheDaten = JSON.parse(localStorage.getItem('Mathe'));
-let frageZuLöschen = {question: ..., answer: ...}
-let neueMatheDaten = []
-for(let i =0; i < alteMatheDaten.length; i++){
-	if(alteMatheDaten[i].question !== frageZuLöschen.question && alteMatheDaten[i].answer !== frageZuLöschen.answer ){
-	neueMatheDaten.push(alteMatheDaten[i]);
-	}
-}
-localStorage.setItem(JSON.stringify(neueMatheDaten));
-*/
-
-
-
-
-// -+-
-
-
-
-/*const mathezufall = require("lodash");
-//let array1 = ["banane","keine ahnung","3",4,5,6,"asfdge"]
-
-let randomArray = mathezufall.sampleSize(mathearray, array.length)
-console.log(randomArray)
-*/
-
-/*class geographie1 {
-  constructor(question, answer) {
-    this.question = question;
-    this.answer = answer;
-  }
-};
-
-let hallo=[{"question":"Niederlande","answer":"Amsterdam"}]
-
-//const fruits = ["Banana", "Orange", "Apple", "Mango"];
-hallo.push("Kiwi", "Lemon");
-console.log(hallo)
-*/
 start();
 
 function mainMenu() {
@@ -104,10 +18,11 @@ function mainMenu() {
   console.clear();
   return options[choice];
 }
- 
+
 function start(){
   
 console.log(`${pc.blue('Menu \n\n')}`);
+console.log(``)
 console.log(`${pc.green("Hallo")} und ${pc.red("Willkommen!")}`);
 ut.getCategories();
   
@@ -132,12 +47,3 @@ const choice = mainMenu();
   }
   console.clear();  
 }
-  
-  
-
-
-
-
-
-
-  

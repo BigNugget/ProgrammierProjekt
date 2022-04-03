@@ -1,111 +1,33 @@
 const readlineSync = require('readline-sync');
-const { geographieAufgaben } = require('../Geographie/geographie');
-const { matheAufgaben } = require('../Mathe/mathematik');
-const { geschichtsAufgaben } = require('../Geschichte/geschichte');
 const { ut } = require('../utils');
 const pc = require('picocolors');
-
 const LocalStorage = require('node-localstorage').LocalStorage;
 const localStorage = new LocalStorage('./database');
 
 function learn() {
   console.log(`${pc.blue('Menu>Lernen \n\n')}`);
-  console.log('--- ToDo: Fach auswählen ---');
-  const options  = ut.getCategories();
+  console.log('--- ToDo: Kategorie wählen ---');
+  // "..." -> fasst alle Kategorien aus getCategories zusammen und schreibt sie in "Alle"
+  const options  = ["Alle", ...ut.getCategories()]; 
+  //["Alle", ["B", "C"]] --> ["Alle", "B", "C"]
   const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
   console.clear();
   courses(options[choice]);
 }
 
 function courses(choice){
-  console.log(ut.getTasks(choice));
-  readlineSync.question("Warten");
+  if (choice === "Alle") {
+    let allQuestions = ut.getAllQuestions();
+    let laenge = ut.RangeSlider(allQuestions.length);
+    ut.showQuestions(allQuestions, laenge);
+  } else {
+    let category = ut.getTasks(choice);
+    let laenge = ut.RangeSlider(category.questions.length);
+    ut.showQuestions(category.questions, laenge);  
+  }
+  ut.goBack();
+  // readlineSync.question("Warten");
 }
 
 exports.learn = learn;  
 exports.courses=courses;
-
-
- /*const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
-  console.clear();
-  return options[choice];
-}
-}
-function affe() {
-  console.log('--- ToDo: Fach auswählen ---');
-  const choice = readlineSync.keyInSelect(
-    ['Geographie', 'Mathematik', 'Geschichte'],
-    'Was möchtest Du tun?',
-    
-  );
-    while (true) {
-  
-  switch (choice) {
-    case 0:
-      Geographie();
-      break;
-    case 1:
-      Matheaufgaben();
-      break;
-
-    case 3:
-      Geschichte();
-      break;
-    case 4:
-      console.log('Auf Wiedersehen!');
-      process.exit(1);
-      break;
-    default:
-      console.log('ungültige Eingabe!');
-      break;
-  }
-  console.clear();
-}
-  
-}
-
-exports.affe = affe;
-
-
-
-/*function learn() {
-  console.clear();
-  
-  while (true) {
-    console.log('TODO: Fach auswählen…');
-    console.log('Mathematik');
-    console.log('Geographie');
-     console.log('Politik');
-    console.log('TODO: Ask for number of questions…');
-    console.log(
-      'TODO: validate number, check number < Anzahl Fragen'
-    );
-    console.log('TODO: Ablauf Lernmodus');
-    console.log(
-      'Du hast (X von Y)|alle  Fragen richtig beantwortet!'
-    );
-    const choice = readlineSync.keyInSelect(
-      ['Weiterlernen', 'Zurück zum Hauptmenü'],
-      'Willst Du weiterlernen?',
-      { cancel: false }
-    );                
-    if (choice === 1) {
-      return;
-    } else {
-      console.clear();
-      console.log('OK, nächste Runde!');
-    }
-  }
-}
-*/
-
-
-
-
-
-
-
-
-
-  
-  

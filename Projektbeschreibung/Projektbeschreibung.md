@@ -1,11 +1,11 @@
 Programmierprojekt 
 Gruppe B
 
-Aleyna Yildiz Koc,
-Benjamin Bay,
-Felix Kern,
+###### Aleyna Yildiz Koc,
+###### Benjamin Bay,
+###### Felix Kern,
 
-Karteikartensystem
+# Karteikartensystem
 
 Beispiel: „Lernsoftware“
 
@@ -16,31 +16,31 @@ MUST-HAVE-Anforderungen (Beispiel)
 
 •	Es gibt Kategorien (oder Themen bzw. Kurse) — diese stehen für beliebige Themen oder Vorlesungsinhalte, die jemand lernen möchte (Beispiele: Englisch, Geographie,JavaScript, Algorithmen, etc.). Kategorien enthalten beliebig viele Fragen.
 
-•	Verwaltungsmodus 
+## •	Verwaltungsmodus  
 
-o	Kategorien können erstellt werden (kann auch automatisch bei der Erstellung neuer Fragen in noch nicht vorhandenen Kategorien geschehen).
+o	Kategorien können erstellt werden (kann auch automatisch bei der Erstellung neuer Fragen in noch nicht vorhandenen Kategorien geschehen). ✓
 
-o	Fragen mit Antworten können für eine Kategorie erstellt werden.
+o	Fragen mit Antworten können für eine Kategorie erstellt werden. ✓
 
-•	Anwendungsmodus 
+## •	Anwendungsmodus 
 
-o	Das Programm fragt, zu welchem Themengebiet Fragen gestellt werden (z.B. Englisch-Vokabeln, Geographie, IT-Wissen) oder ob zufällige Fragen aus allen vorhandenen Themengebieten beantwortet werden sollen.
+o	Das Programm fragt, zu welchem Themengebiet Fragen gestellt werden (z.B. Englisch-Vokabeln, Geographie, IT-Wissen) oder ob zufällige Fragen aus allen vorhandenen Themengebieten beantwortet werden sollen. -> ✓
 
-o	Es wird gefragt, wie viele Fragen zu dem Thema (oder aus allen Themen) beantwortet werden sollen.
+o	Es wird gefragt, wie viele Fragen zu dem Thema (oder aus allen Themen) beantwortet werden sollen. -> ✓
 
-o	Für diese Anzahl werden aus dem Thema (oder aus allen Themen) zufällige Fragen gewählt.
+o	Für diese Anzahl werden aus dem Thema (oder aus allen Themen) zufällige Fragen gewählt. ✓
 
-o	Die Fragen werden einzeln und nacheinander angezeigt und eine Antwort kann angegeben werden.
+o	Die Fragen werden einzeln und nacheinander angezeigt und eine Antwort kann angegeben werden. ✓
 
-o	Es wird gezeigt, ob die Antwort richtig oder falsch war. Bei falscher Antwort wird die richtige angezeigt (zum Lernen).
+o	Es wird gezeigt, ob die Antwort richtig oder falsch war. Bei falscher Antwort wird die richtige angezeigt (zum Lernen). ✓
 
-⟶ Gruppen bestehend aus drei Personen implementieren zusätzlich Fragen/Antworten mit Lückentext oder echtes Multiple Choice (d.h. mögliche Mehrfachauswahl verschiedener vorgebener Antworten) und realisieren den umfangreichen Verwaltungsmodus (Bearbeiten und Löschen von einzelnen Kategorien, Fragen und Antworten).
+⟶ Gruppen bestehend aus drei Personen implementieren zusätzlich Fragen/Antworten mit Lückentext oder echtes Multiple Choice (d.h. mögliche Mehrfachauswahl verschiedener vorgebener Antworten) und realisieren den umfangreichen Verwaltungsmodus (Bearbeiten und Löschen von einzelnen Kategorien, Fragen und Antworten). 
 
-Vorschläge für zusätzliche NICE-TO-HAVEs (müssen nicht vom Dozenten bestätigt werden, grundsätzlich sind eigene Ideen möglich)
+# Vorschläge für zusätzliche NICE-TO-HAVEs (müssen nicht vom Dozenten bestätigt werden, grundsätzlich sind eigene Ideen möglich)
 
 •	Das Programm speichert den Lernfortschritt/Statistiken ab und zeigt diese an.
 
-•	Umfangreicher Verwaltungsmodus (zusätzlich mit Bearbeiten und Löschen der Kategorien und Fragen) (NICE-TO_HAVE nur für Gruppen zu zweit)
+•	Umfangreicher Verwaltungsmodus (zusätzlich mit Bearbeiten und Löschen der Kategorien und Fragen) (NICE-TO_HAVE nur für Gruppen zu zweit) ✓
 
 •	Es gibt weitere Arten von Fragen (z.B. Multiple Choice, Lückentext, Vorgegebene Antwort mit zu korrigierenden Fehlern, usw.). 
 
@@ -51,11 +51,11 @@ o	Beispiel für Lückentext:
 	Lückentext: pi = 3.14;
 	Erwartete Antwort: const pi = 3.14;
 
-•	Statt der zufälligen Auswahl von Fragen werden die Fragen gestellt, die am häufigsten falsch beantwortet wurden.
+•	Statt der zufälligen Auswahl von Fragen werden die Fragen gestellt, die am häufigsten falsch beantwortet wurden. 
 
 •	Benutzerkonzept mit individueller Lernhistorie und Highscore.
 
-•	Import-Funktion, um weitere Fragen für eine (neue) Kategorie aus einer Datei einzulesen und für die Verwendung im Programm abzuspeichern (z.B. mit Angabe des Dateinamens, Einlesen der Inhalte in einem anderen Format als sie abgespeichert werden).
+•	Import-Funktion, um weitere Fragen für eine (neue) Kategorie aus einer Datei einzulesen und für die Verwendung im Programm abzuspeichern (z.B. mit Angabe des Dateinamens, Einlesen der Inhalte in einem anderen Format als sie abgespeichert werden). 
 
 •	weitere eigene Ideen.
 
@@ -63,35 +63,35 @@ Sie können diesen Projektvorschlag umsetzen oder eigene Ideen mit JavaScript en
 
 Vorgehensweise:
 
-•	Gruppen mit 2-3 Personen bilden.
+•	Gruppen mit 2-3 Personen bilden. ✓
 
-•	Jede Gruppe einigt sich auf ein Projekt.
+•	Jede Gruppe einigt sich auf ein Projekt. ✓
 
-•	Wählt eine Gruppe das Standardprojekt aus, dann stehen die MUST-HAVE-Anforderungen fest.
+•	Wählt eine Gruppe das Standardprojekt aus, dann stehen die MUST-HAVE-Anforderungen fest. ✓
 
 •	Für eigene Ideen werden die MUST-HAVE-Anforderungen von der Gruppe festgelegt und vom Dozenten bestätigt.
 
-•	Dokumentieren Sie die MUST-HAVEs in der Form wie oben z.B. in einer README-Datei direkt im Projekt.
+•	Dokumentieren Sie die MUST-HAVEs in der Form wie oben z.B. in einer README-Datei direkt im Projekt. :TODO:
 
-•	Jede Gruppe schickt eine E-Mail an den Dozenten (beteiligte Personen, gewähltes Projekt bzw. Projektidee und die vorgeschlagenen MUST-HAVEs).
+•	Jede Gruppe schickt eine E-Mail an den Dozenten (beteiligte Personen, gewähltes Projekt bzw. Projektidee und die vorgeschlagenen MUST-HAVEs). ✓
 
-•	Bei eigenen Ideen werden die Anforderungen mit dem Dozenten besprochen, der diese bestätigt oder Anpassungen wünscht.
+•	Bei eigenen Ideen werden die Anforderungen mit dem Dozenten besprochen, der diese bestätigt oder Anpassungen wünscht. 
 
-•	Gruppen mit 3 Leuten sollten mehr MUST-HAVE-Anforderungen festlegen als Gruppen mit 2 Leuten.
+•	Gruppen mit 3 Leuten sollten mehr MUST-HAVE-Anforderungen festlegen als Gruppen mit 2 Leuten. ✓
 
-•	Die NICE-TO-HAVEs müssen nicht vom Dozenten bestätigt werden sondern werden bei der Abgabe beschrieben bzw. aufgelistet.
+•	Die NICE-TO-HAVEs müssen nicht vom Dozenten bestätigt werden sondern werden bei der Abgabe beschrieben bzw. aufgelistet. :TODO:
 
-•	Jede Gruppe teilt dem Dozenten den Link auf das gemeinsame replit-Projekt mit oder lädt den Dozenten zum git-Repository ein (GitHub: @behrends, GitLab: @ebehrends)
+•	Jede Gruppe teilt dem Dozenten den Link auf das gemeinsame replit-Projekt mit oder lädt den Dozenten zum git-Repository ein (GitHub: @behrends, GitLab: @ebehrends) ✓
 
-•	Nach Abgabe des Codes wird die Umsetzung der Anforderungen bei der Bewertung überprüft.
+•	Nach Abgabe des Codes wird die Umsetzung der Anforderungen bei der Bewertung überprüft. 
 
-Optional aber hilfreich: Entwicklung im Team mit git und GitHub o.ä. (ggf. Zugriff für Dozenten ermöglichen).
+Optional aber hilfreich: Entwicklung im Team mit git und GitHub o.ä. (ggf. Zugriff für Dozenten ermöglichen). ✓
 
-Bei der Bewertung gibt es auch Punkte für zusätzliche NICE-TO-HAVEs. Diese bestimmen Sie selbst und dokumentieren diese in einem Dokument, das Sie der Abgabe hinzufügen.
+Bei der Bewertung gibt es auch Punkte für zusätzliche NICE-TO-HAVEs. Diese bestimmen Sie selbst und dokumentieren diese in einem Dokument, das Sie der Abgabe hinzufügen. 
 
-Die Abgabe erfolgt über Moodle, siehe dazu den entsprechenden Eintrag im Moodle-Kursraum.
+Die Abgabe erfolgt über Moodle, siehe dazu den entsprechenden Eintrag im Moodle-Kursraum. 
 
-Das Bewertungsschema wird in einem eigenen Dokument im Moodle-Kursraum beschrieben.
+Das Bewertungsschema wird in einem eigenen Dokument im Moodle-Kursraum beschrieben. ✓
 
 
 
