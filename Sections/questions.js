@@ -1,4 +1,5 @@
 const readlineSync = require("readline-sync");
+/*const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
 /*
 
 //Falls ihr ne Frage hinzufügen wollt:
@@ -17,28 +18,36 @@ function questions() {
   courses(options[choice]);
 }
 
-function courses(choice){
+ function courses(choice){
   switch (choice) {
     case "Geographie":
-        let qg= prompt (" Tippe hier deine Frage zum fach Geographie ein  ")
-        let alteGeographieDaten = JSON.parse(localStorage.getItem('Geographie'));
-				let neueFrage1 = qg;
+        let a1= prompt (" Tippe hier deine Frage zum fach Geographie ein  ")
+        let alteGeographieDaten = JSON.parse(localStorage.getItem('database1'));
+				let neueFrage1 =a1 ;
 				alteGeographieDaten.push(neueFrage1);
 				localStorage.setItem(JSON.stringify(alteGeographieDaten));
+      //Json.parse(alteGographiedatw)
+      //JSON.parse(JSON.stringify(alteGeographieDaten))
+      console.log(alteGeographieDaten)
       break;
     case "Mathematik":
-      let qm= prompt (" Tippe hier deine Frage zum fach Mathematik ein  ")
-        let alteMatheDaten = JSON.parse(localStorage.getItem('Mathe'));
-			let neueFrage2 = qm;
+      let a2 = prompt (" Tippe hier deine Frage zum fach Mathematik ein  ")
+        let alteMatheDaten = JSON.parse(localStorage.getItem('database2'));
+			let neueFrage2 = a2;
 			alteGeographieDaten.push(neueFrage2);
 				localStorage.setItem(JSON.stringify(alteMatheDaten));
 		break;
 		case "Geschichte":
-      let g2= prompt (" Tippe hier deine Frage zum fach Mathematik ein  ")
-        let alteGeschichteDaten = JSON.parse(localStorage.getItem('Geschichte'));
-let neueFrage3= qg;
+      let a3= prompt (" Tippe hier deine Frage zum Fach Geschichte ein  ")
+        let alteGeschichteDaten = JSON.parse(localStorage.getItem('database3'));
+let neueFrage3= a3;
 alteGeographieDaten.push(neueFrage3);
 localStorage.setItem(JSON.stringify(alteGeschichteDaten));
+    }
+  }
+/*
+
+      
       /*matheaufgaben();
       //matheaufgaben.matheaufgaben();
       //matheaufgaben.fragenAufruf();
@@ -53,8 +62,8 @@ localStorage.setItem(JSON.stringify(alteGeschichteDaten));
       console.log('ungültige Eingabe!');
       break;
       */
-  }
-}
+  
+
 
 exports.questions = questions; 
 exports.courses=courses;

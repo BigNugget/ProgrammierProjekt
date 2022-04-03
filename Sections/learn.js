@@ -38,6 +38,7 @@ function courses(choice){
 
 exports.learn = learn;  
 
+
  /*const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
   console.clear();
   return options[choice];
@@ -109,8 +110,9 @@ exports.affe = affe;
     }
   }
 }
-exports.learn = learn;
 */
+
+
 
 
 

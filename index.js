@@ -1,12 +1,13 @@
 const readlineSync = require("readline-sync");
 const { admin, start1} = require("./Sections/admin");
-const { learn } = require("./Sections/learn");
-const { mathe1,database } = require("storage");
-const { matheaufgaben,RangeSlider  } = require("./Mathe/mathematik");
+const { learn, } = require("./Sections/learn");
+const { mathe1,database1,geographie1,database2,geschichte3,database3 } = require("storage");
+const { matheaufgaben,RangeSlider } = require("./Mathe/mathematik");
 //const { geschichtsaufgaben } = require("./Geschichte/geschichte");
 const { LocalStorage } = require('node-localstorage');
 const localStorage = new LocalStorage('./database');
 const {questions} = require('./Sections/questions');
+
 
 /*
 // Hier kriegt ihr die Daten aus Mathe Datenbank
@@ -79,10 +80,11 @@ localStorage.setItem(JSON.stringify(neueMatheDaten));
 let randomArray = mathezufall.sampleSize(mathearray, array.length)
 console.log(randomArray)
 */
+
 start();
 
-
 function mainMenu() {
+   
   console.log('--- HAUPTMENÜ ---');
   const options = ['Lernen', 'Verwaltung', 'Programm beenden'];
   const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
@@ -102,7 +104,7 @@ const choice = mainMenu();
       break;
     case "Programm beenden":
       console.log('Auf Wiedersehen!');
-      process.exit(1);
+      //process.exit(1);
       break;
     default:
       console.log('ungültige Eingabe!');
@@ -113,6 +115,8 @@ const choice = mainMenu();
 
   
 }
+  
+  
 
 
 
