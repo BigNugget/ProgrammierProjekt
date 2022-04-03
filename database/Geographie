@@ -1,4 +1,4 @@
-[{"question":"Niederlande","answer":"Amsterdam"},{"question":"Griechenland","answer":"Athen"},
+{"questions":[{"question":"Niederlande","answer":"Amsterdam"},{"question":"Griechenland","answer":"Athen"},
 {"question":"Deutschland","answer":"Berlin"},
 {"question":"Ungarn","answer":"Budapest"},
 {"question":"Irland","hauptstadt":"Dublin"},
@@ -9,4 +9,4 @@
 {"question":"Italien","answer":"Rom"},
 {"question":"Schweden","answer":"Stockholm"},{"question":"Albanien","answer":"Tirana"},{"question":"Vatikanstadt","answer":"Vatikanstadt"},{"question":"Polen","answer":"Warschau"},
 {"question":"Österreich","answer":"Wien"},
-{"question":"Kroatien","answer":"Zagreb"}]
+{"question":"Kroatien","answer":"Zagreb"}]}

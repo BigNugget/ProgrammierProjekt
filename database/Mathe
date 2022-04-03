@@ -1,6 +1,6 @@
 
 
-[{"question":"Was  ist die erste  Ableitung der Zahl 7?","answer":0},
+{[{"question":"Was  ist die erste  Ableitung der Zahl 7?","answer":0},
 
 {"question":"Was ist die erste Ableitung von 5x^4+6x^2+1","answer":"20x^3+12x"},
 
@@ -43,3 +43,4 @@
 {"question":" Berechnen sie   (x^6)^2  ","answer":"x^12"},
 
 {"question":" Schreiben sie a ^-3 um ","answer":"1 / a ^3"}]
+}

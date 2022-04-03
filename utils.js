@@ -48,7 +48,9 @@ class Utils {
 //Füge neue Kategorie hinzu zu /database -- Start Funktion
   static setThema(thema) {
       // Wir erstellen ein leeres Array
-      let neuesThema = [];
+      let neuesThema = {
+        questions: []
+      }
       if (localStorage.getItem(thema) === null) {
         let array = JSON.stringify(neuesThema);
         localStorage.setItem(thema, array);
@@ -82,30 +84,37 @@ class Utils {
 //Ende Funktion
 
 //Start von Funktion
-  static neueFrage() {
+  static neueFrage(category) {
       let question = readlineSync.question("Frage: ");
       let answer = readlineSync.question("Antwort: ");
-      let category = readlineSync.question("Kategorie: ")
+      //let category = readlineSync.question("Kategorie: ")
       let obj = {
         question: `${question}`,
         answer: `${answer}`,
         category: `${category}`
       }
+      Utils.saveTask(obj);
       return obj;
       console.log(obj)
     }
-
+//Anzahl Kategorien wird in Array geschrieben
   static getCategories(){
-    console.log(fs.readdirSync("./database"));
+    return (fs.readdirSync("./database"));
     
   }
-//Ende von Funktion
-    
+//Ende von Funktion -- hol Kategorie aus Array getCategories
+  static getTasks(categoryName){
+    let task = localStorage.getItem(categoryName);
+    return JSON.parse(task);
+  } 
+
+  
+  static saveTask(obj) {
+    let category = Utils.getTasks(obj.category);
+    if (category.questions === null) category.questions = [];
+    category.questions.push(obj);
+    localStorage.setItem(obj.category, JSON.stringify(category));
+  }
   }
   
-  
-  
-//Erstelle Datenbank mit key(Thema) und füge value(Frage,antwort) ein
-
-
 exports.ut = Utils;

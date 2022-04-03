@@ -11,33 +11,15 @@ const localStorage = new LocalStorage('./database');
 function learn() {
   console.log(`${pc.blue('Menu>Lernen \n\n')}`);
   console.log('--- ToDo: Fach auswählen ---');
-  const options  = ['Geographie', 'Mathematik', 'Geschichte'];
+  const options  = ut.getCategories();
   const choice = readlineSync.keyInSelect(options,'Was möchtest Du tun?');
   console.clear();
   courses(options[choice]);
 }
 
 function courses(choice){
-  switch (choice) {
-      // 
-    case "Geographie":
-      geographieAufgaben();
-      break;
-    case "Mathematik":
-      //matheaufgaben.matheaufgaben();
-      matheAufgaben();
-      
-       //localStorage.setItem('mathe', JSON.stringify(dateaes));
-      break;
-    case "Geschichte":
-      geschichtsAufgaben();
-      break;
-
-      
-    default:
-      console.log('ungültige Eingabe!');
-      break;
-  }
+  console.log(ut.getTasks(choice));
+  readlineSync.question("Warten");
 }
 
 exports.learn = learn;  
